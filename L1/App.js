@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,Alert } from 'react-native';
 import { Button } from 'react-native-web';
 import React, { useState } from "react";
 
@@ -7,21 +7,21 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.buttonHeader}>
+        <TouchableOpacity style={styles.buttonHeader} onPress={()=>alert('back')}>
           <Text  style={{backgroundColor:'yellow'}}> Back </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.midBody}>
-        <TouchableOpacity style={styles.distanceButton}> 
+        <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("1h")}> 
           <Text style={{fontSize:30}}>1h</Text>  
         </TouchableOpacity>
-        <TouchableOpacity style={styles.distanceButton}> 
+        <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("2h")}> 
           <Text style={{fontSize:30}}>2h</Text>  
         </TouchableOpacity>
-        <TouchableOpacity style={styles.distanceButton}> 
+        <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("3h")}> 
           <Text style={{fontSize:30}}>3h</Text>  
         </TouchableOpacity>
-        <TouchableOpacity style={styles.distanceButton}> 
+        <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("4h")}> 
           <Text style={{fontSize:30}}>4h</Text>  
         </TouchableOpacity>
       </View>
@@ -43,11 +43,16 @@ const styles = StyleSheet.create({
   midBody:{
     flex:90,
     backgroundColor:'red',
+    alignItems: 'center',
+   // justifyContent: 'center',
   },
   distanceButton:{
+    width:'80%',
+    height:'8%',
+    backgroundColor:'pink',
     marginTop:'5%',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonHeader: {
     width:'20%',
