@@ -1,12 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,TouchableOpacity,Alert } from 'react-native';
 import React, { useState } from "react";
-import { Icon } from 'react-native-vector-icons';
-
+import { Icon } from 'react-native-elements'
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
+        <TouchableOpacity style={styles.buttonHeader}>
+          <Icon 
+          name='chevron-left'
+          size={30}
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.midBody}>
         <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("1h")}> 
@@ -20,6 +25,16 @@ export default function App() {
         </TouchableOpacity>
         <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("4h")}> 
           <Text style={{fontSize:30}}>4h</Text>  
+        </TouchableOpacity>
+        <View style={styles.countdown}></View>
+        <TouchableOpacity  style={styles.set}>
+          <View> 
+          
+              <Text style={{fontSize:20}}>
+                SET
+              </Text>
+          
+          </View>
         </TouchableOpacity>
       </View>
     </View>
@@ -47,14 +62,28 @@ const styles = StyleSheet.create({
     width:'80%',
     height:'8%',
     backgroundColor:'pink',
-    marginTop:'5%',
+    marginTop:'10%',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  countdown:{
+    backgroundColor:'pink',
+    width:'30%',
+    height:'10%',
+    marginTop:'10%'
+  },
+  set:{
+    backgroundColor:'blue',
+    width:'50%',
+    height:'10%',
+    marginTop:'10%',
+    justifyContent:'center',
+    alignItems:'center',
+    fontSize:30
+  },
   buttonHeader: {
-    width:'20%',
-    height:'60%',
-    fontSize:30,
-    marginLeft:'10%'
+    backgroundColor:'yellow',
+    height:'50%',
+    width:'10%'
   },
 });
