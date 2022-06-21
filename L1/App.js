@@ -1,15 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,TouchableOpacity,Alert } from 'react-native';
-import { Button } from 'react-native-web';
 import React, { useState } from "react";
+import { Icon } from 'react-native-vector-icons';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity style={styles.buttonHeader} onPress={()=>alert('back')}>
-          <Text  style={{backgroundColor:'yellow'}}> Back </Text>
-        </TouchableOpacity>
       </View>
       <View style={styles.midBody}>
         <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("1h")}> 
