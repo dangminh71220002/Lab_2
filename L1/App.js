@@ -12,6 +12,11 @@ export default function App() {
           size={30}
           />
         </TouchableOpacity>
+        <View style={{alignItems:'center'}}>
+          <Text style={styles.contentHeader}>
+            Sleep Timer
+          </Text>
+        </View>
       </View>
       <View style={styles.midBody}>
         <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("1h")}> 
@@ -26,14 +31,14 @@ export default function App() {
         <TouchableOpacity style={styles.distanceButton} onPress={()=>alert("4h")}> 
           <Text style={{fontSize:30}}>4h</Text>  
         </TouchableOpacity>
-        <View style={styles.countdown}></View>
+        <View style={styles.countdown}>
+          <Text style={{fontSize:25}}>00:00</Text>
+        </View>
         <TouchableOpacity  style={styles.set}>
           <View> 
-          
               <Text style={{fontSize:20}}>
                 SET
               </Text>
-          
           </View>
         </TouchableOpacity>
       </View>
@@ -47,43 +52,55 @@ const styles = StyleSheet.create({
   },
   header:{
     flex: 10,
-    backgroundColor:'blue',
+    backgroundColor:'#7DD0F6',
     color:"blue",
     // alignItems: 'center',
-     justifyContent: 'center',
   },
   midBody:{
     flex:90,
-    backgroundColor:'red',
+    // backgroundColor:'red',
     alignItems: 'center',
    // justifyContent: 'center',
   },
   distanceButton:{
     width:'80%',
     height:'8%',
-    backgroundColor:'pink',
+    backgroundColor:'#7DD0F6',
     marginTop:'10%',
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius:20
+  },
+  contentHeader:{
+    fontSize:25,
+    marginTop:'-7%',
+    justifyContent:'center',
+    alignItems:'center',
+    textAlign:'center'
   },
   countdown:{
-    backgroundColor:'pink',
+    backgroundColor:'#7DD0F6',
     width:'30%',
     height:'10%',
-    marginTop:'10%'
+    marginTop:'10%',
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:10
   },
   set:{
-    backgroundColor:'blue',
+    backgroundColor:'#7DD0F6',
     width:'50%',
     height:'10%',
     marginTop:'10%',
     justifyContent:'center',
     alignItems:'center',
-    fontSize:30
+    fontSize:30,
+    borderRadius:15
   },
   buttonHeader: {
-    backgroundColor:'yellow',
+    // backgroundColor:'yellow',
     height:'50%',
-    width:'10%'
+    width:'10%',
+    marginTop:'5%'
   },
 });
