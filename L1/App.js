@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   contentHeader:{
     fontSize:25,
-    marginTop:'-7%',
+    marginTop:'-12%',
     justifyContent:'center',
     alignItems:'center',
     textAlign:'center'
@@ -101,6 +101,6 @@ const styles = StyleSheet.create({
     // backgroundColor:'yellow',
     height:'50%',
     width:'10%',
-    marginTop:'5%'
+    marginTop:'14%'
   },
 });
